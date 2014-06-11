@@ -1,0 +1,10 @@
+VAR
+ i , j ;
+ a : ARRAY[10];
+{
+  i = 42 ;
+  print i;
+  a[2] = 5;
+  j = a[2];
+  print j;
+}

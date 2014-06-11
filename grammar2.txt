@@ -1,0 +1,59 @@
+program decl id_list body stmt_list stmt if_stmt while_stmt assign_stmt repeat_stmt expr term factor condition relop print_stmt type_name var_decl var_decl_section var_decl_list
+type_decl_section type_decl type_decl_list array #
+print debug ; , { } ( ) [ ] : = + - * / " <> > < >= <= IF WHILE REPEAT UNTIL INT REAL BOOLEAN STRING ID VAR TYPE #
+program -> decl body #
+program -> body #
+decl -> type_decl_section var_decl_section #
+decl -> type_decl_section #
+decl -> var_decl_section #
+type_decl_section -> TYPE type_decl_list #
+type_decl_list -> type_decl type_decl_list #
+type_decl_list -> type_decl #
+type_decl -> id_list : type_name ; #
+type_name -> REAL #
+type_name -> INT #
+type_name -> BOOLEAN #
+type_name -> STRING #
+type_name -> ID #
+var_decl_section -> VAR var_decl_list #
+var_decl_list -> var_decl var_decl_list #
+var_decl_list -> var_decl #
+var_decl -> id_list : type_name ; #
+var_decl -> id_list [ INT ] : type_name ; #
+id_list -> ID , id_list #
+id_list -> ID #
+body -> { stmt_list } #
+stmt_list -> stmt stmt_list #
+stmt_list -> stmt #
+stmt -> while_stmt #
+stmt -> repeat_stmt #
+stmt -> if_stmt #
+stmt -> assign_stmt #
+stmt -> print_stmt #
+print_stmt -> print id_list ; #
+print_stmt -> print debug ; #
+print_stmt -> print array ; #
+while_stmt -> WHILE condition body #
+repeat_stmt -> REPEAT body UNTIL condition #
+if_stmt -> IF condition body #
+assign_stmt -> ID = expr ; #
+assign_stmt -> array = expr ; #
+expr -> term + expr #
+expr -> term - expr #
+expr -> term #
+term -> factor * term # 
+term -> factor / term #
+term -> factor #
+factor -> ( expr ) #
+factor -> type_name #
+factor -> array #
+array -> ID [ expr ] #
+condition -> expr relop expr #
+relop -> > #
+relop -> < #
+relop -> >= #
+relop -> <= #
+relop -> <> #
+relop -> = #
+
+##

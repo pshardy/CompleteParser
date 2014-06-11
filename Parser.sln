@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Parser", "Parser\Parser.vcxproj", "{5803E4A2-8235-4239-ADC5-0625D39651DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Console|Win32 = Console|Win32
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5803E4A2-8235-4239-ADC5-0625D39651DA}.Console|Win32.ActiveCfg = Console|Win32
+		{5803E4A2-8235-4239-ADC5-0625D39651DA}.Console|Win32.Build.0 = Console|Win32
+		{5803E4A2-8235-4239-ADC5-0625D39651DA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5803E4A2-8235-4239-ADC5-0625D39651DA}.Debug|Win32.Build.0 = Debug|Win32
+		{5803E4A2-8235-4239-ADC5-0625D39651DA}.Release|Win32.ActiveCfg = Release|Win32
+		{5803E4A2-8235-4239-ADC5-0625D39651DA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

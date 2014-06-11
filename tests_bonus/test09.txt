@@ -1,0 +1,20 @@
+
+VAR
+  i;
+  a : ARRAY[100];
+{
+   i = 1;
+   WHILE  i < 11 
+   {
+       print i;
+       a[i] = i * 2;
+       i = i + 1;
+   }
+   i = 1;
+   WHILE  i < 11 
+   {
+       print a[i];
+       i = i + 1;
+   }
+}
+

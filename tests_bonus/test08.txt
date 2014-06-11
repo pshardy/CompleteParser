@@ -1,0 +1,20 @@
+
+VAR
+  a, b, r;
+  c : ARRAY[100];
+{
+   a = 10;
+   b = 5;
+   c[a] = 10;
+   c[a + b] = 20;
+   c[a * b] = a + b * (c[a] + c[a + b]);
+   r = c[a];
+   print r;
+   r = c[a + b];
+   print r;
+   r = c[a*b];
+   print r;
+   r = c[10] + c[15] + c[50];
+   print r;
+}
+

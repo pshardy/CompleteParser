@@ -1,0 +1,34 @@
+program var_section id_list body stmt_list stmt if_stmt while_stmt assign_stmt repeat_stmt expr op condition primary relop print_stmt #
+print debug ; , { } = + - / * <> > < IF WHILE REPEAT UNTIL INT ID #
+program -> var_section body #
+var_section -> id_list ; #
+id_list -> ID , id_list #
+id_list -> ID #
+body -> { stmt_list } #
+stmt_list -> stmt stmt_list #
+stmt_list -> stmt #
+stmt -> while_stmt #
+stmt -> repeat_stmt #
+stmt -> if_stmt #
+stmt -> assign_stmt #
+stmt -> print_stmt #
+print_stmt -> print id_list ; #
+print_stmt -> print debug ; #
+while_stmt -> WHILE condition body #
+repeat_stmt -> REPEAT body UNTIL condition #
+if_stmt -> IF condition body #
+assign_stmt -> ID = primary ; #
+assign_stmt -> ID = expr ; #
+expr -> primary op primary #
+primary -> ID #
+primary -> INT #
+op -> + #
+op -> - #
+op -> * #
+op -> / #
+condition -> primary relop primary #
+relop -> > #
+relop -> < #
+relop -> <> #
+
+##

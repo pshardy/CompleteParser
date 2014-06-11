@@ -1,0 +1,60 @@
+program decl type_decl_section type_decl_list type_decl type_name var_decl_section var_decl_list var_decl id_list body stmt_list stmt if_stmt else_stmt while_stmt assign_stmt expr term factor condition primary relop print_stmt #
+print debug TYPE : ; , { } ( ) = + - / * <> > < >= <= IF ELSE WHILE REAL INT BOOLEAN STRING ID VAR #
+program -> decl body #
+program -> body #
+decl -> type_decl_section var_decl_section #
+decl -> type_decl_section #
+decl -> var_decl_section #
+type_decl_section -> TYPE type_decl_list #
+type_decl_list -> type_decl type_decl_list #
+type_decl_list -> type_decl #
+type_decl -> id_list : type_name ; #
+type_name -> REAL #
+type_name -> INT #
+type_name -> BOOLEAN #
+type_name -> STRING #
+type_name -> ID #
+var_decl_section -> VAR var_decl_list #
+var_decl_list -> var_decl var_decl_list #
+var_decl_list -> var_decl #
+var_decl -> id_list : type_name ; #
+id_list -> ID , id_list #
+id_list -> ID #
+body -> { stmt_list } #
+stmt_list -> stmt stmt_list #
+stmt_list -> stmt #
+stmt -> while_stmt #
+stmt -> if_stmt #
+stmt -> assign_stmt #
+stmt -> print_stmt #
+print_stmt -> print id_list ; #
+print_stmt -> print debug ; #
+while_stmt -> WHILE condition body #
+if_stmt -> IF condition body else_stmt #
+else_stmt -> ELSE if_stmt #
+else_stmt -> ELSE body #
+else_stmt -> #
+assign_stmt -> ID = expr ; #
+expr -> term + expr #
+expr -> term - expr #
+expr -> term #
+term -> factor * term #
+term -> factor / term #
+term -> factor #
+factor -> ( expr ) #
+factor -> INT #
+factor -> REAL #
+factor -> ID #
+condition -> ID #
+condition -> primary relop primary #
+primary -> ID #
+primary -> INT #
+primary -> REAL #
+relop -> > #
+relop -> < #
+relop -> >= #
+relop -> <= #
+relop -> <> #
+relop -> = #
+
+##
